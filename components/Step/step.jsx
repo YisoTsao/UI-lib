@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
-import React from "react";
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const Step = ({
   className,
@@ -11,27 +11,20 @@ const Step = ({
 }) => (
   <div className={`${className} flex w-full overflow-scroll`}>
     {stepList.map((v, i) => (
-      <div
-        className="flex items-center"
-        key={Math.random().toString(36).substring(2)}
-      >
+      <div className="flex items-center" key={Math.random().toString(36).substring(2)}>
         <div
           className={[
-            `min-w-[15px] min-h-[15px] w-[15px] h-[15px] rounded-[50%]`,
-            v.status
-              ? completeColor
-              : `bg-[#fff] border-[3px] border-solid ${notCompleteCircleColor}`,
-          ].join(" ")}
+            `w-4 h-4 rounded-[50%]`,
+            v.status ? completeColor : `bg-[#fff] border-2 border-solid ${notCompleteCircleColor}`,
+          ].join(' ')}
         />
         {stepList.length - 1 !== i && (
           <div
             className={[
-              "h-1",
+              'h-1',
               lineWidth,
-              v.status && stepList[i + 1]?.status === true
-                ? completeColor
-                : notCompleteColor,
-            ].join(" ")}
+              v.status && stepList[i + 1]?.status === true ? completeColor : notCompleteColor,
+            ].join(' ')}
           />
         )}
       </div>
@@ -50,10 +43,10 @@ Step.propTypes = {
 };
 
 Step.defaultProps = {
-  className: "",
+  className: '',
   stepList: [],
-  completeColor: "bg-blue-300",
-  notCompleteColor: "bg-gray-300",
-  notCompleteCircleColor: "border-gray-300",
-  lineWidth: "w-[95px]",
+  completeColor: 'bg-blue-300',
+  notCompleteColor: 'bg-gray-300',
+  notCompleteCircleColor: 'border-gray-300',
+  lineWidth: 'w-24',
 };

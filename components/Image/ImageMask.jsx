@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Image from "./Image";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Image from './Image';
 
 const ImageMask = React.memo(
   ({
@@ -29,16 +29,10 @@ const ImageMask = React.memo(
         />
         {maskShow && (
           <div className={maskStyle}>
-            {iconFileName && (
-              <Image className={iconClassName} filename={iconFileName} />
-            )}
-            {title && (
-              <span className={` ${titleSize} ${titleColor}`}>{title}</span>
-            )}
+            {iconFileName && <Image className={iconClassName} filename={iconFileName} />}
+            {title && <span className={` ${titleSize} ${titleColor}`}>{title}</span>}
             {subTitle && (
-              <span className={`mt-2.5 ${subTitleSize} ${subTitleColor}`}>
-                {subTitle}
-              </span>
+              <span className={`mt-2.5 ${subTitleSize} ${subTitleColor}`}>{subTitle}</span>
             )}
           </div>
         )}
@@ -64,18 +58,18 @@ ImageMask.propTypes = {
 };
 
 ImageMask.defaultProps = {
-  imgUrl: "",
-  imgRadius: "",
-  imgFileName: "",
-  imgFileExtension: "png",
-  iconClassName: "",
-  iconFileName: "",
-  title: "",
-  titleSize: "text-l",
-  titleColor: "text-fixedWhite",
-  subTitle: "",
-  subTitleSize: "text-m",
-  subTitleColor: "text-fixedWhite",
+  imgUrl: '',
+  imgRadius: '',
+  imgFileName: '',
+  imgFileExtension: 'png',
+  iconClassName: '',
+  iconFileName: '',
+  title: '',
+  titleSize: 'text-l',
+  titleColor: 'text-fixedWhite',
+  subTitle: '',
+  subTitleSize: 'text-m',
+  subTitleColor: 'text-fixedWhite',
   maskShow: true,
 };
 

@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Image from "../Image";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Image from '../Image';
 
 const Modal = ({
   isOpen,
@@ -15,9 +15,9 @@ const Modal = ({
   isOpen && (
     <div
       className={[
-        "fixed inset-y-0 z-50 duration-300 transition-opacity w-full max-w-screen-xs",
+        'fixed inset-y-0 z-50 duration-300 transition-opacity w-full max-w-screen-xs',
         `${backgroundColor}`,
-      ].join(" ")}
+      ].join(' ')}
     >
       {!hiddenCloseIcon && (
         <button
@@ -25,10 +25,7 @@ const Modal = ({
           className="absolute relate top-[19px] left-[19px] z-[1000]"
           onClick={onClose}
         >
-          <Image
-            className="w-[17px] h-[17px]"
-            filename="btn_nav_close_darkbg_n"
-          />
+          <Image className="w-[17px] h-[17px]" filename="btn_nav_close_darkbg_n" />
         </button>
       )}
 
@@ -50,17 +47,17 @@ Modal.propTypes = {
   hiddenCloseIcon: PropTypes.bool,
   className: PropTypes.string,
   backgroundColor: PropTypes.string,
-  content: PropTypes.elementType.isRequired,
-  bottomContent: PropTypes.elementType,
-  topContent: PropTypes.elementType,
+  content: PropTypes.element.isRequired,
+  bottomContent: PropTypes.element,
+  topContent: PropTypes.element,
 };
 
 Modal.defaultProps = {
   isOpen: false,
   onClose: () => {},
   hiddenCloseIcon: false,
-  className: "",
+  className: '',
   bottomContent: null,
   topContent: null,
-  backgroundColor: "bg-[#000000b3]",
+  backgroundColor: 'bg-[#000000b3]',
 };
