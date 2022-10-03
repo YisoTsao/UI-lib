@@ -14,7 +14,7 @@ const Step = ({
       <div className="flex items-center" key={Math.random().toString(36).substring(2)}>
         <div
           className={[
-            `w-4 h-4 rounded-[50%]`,
+            `w-4 h-4 rounded-1/2`,
             v.status ? completeColor : `bg-[#fff] border-2 border-solid ${notCompleteCircleColor}`,
           ].join(' ')}
         />

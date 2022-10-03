@@ -27,7 +27,7 @@ var Step = function Step(_ref) {
       className: "flex items-center",
       key: Math.random().toString(36).substring(2)
     }, /*#__PURE__*/_react["default"].createElement("div", {
-      className: ["w-4 h-4 rounded-[50%]", v.status ? completeColor : "bg-[#fff] border-2 border-solid ".concat(notCompleteCircleColor)].join(' ')
+      className: ["w-4 h-4 rounded-1/2", v.status ? completeColor : "bg-[#fff] border-2 border-solid ".concat(notCompleteCircleColor)].join(' ')
     }), stepList.length - 1 !== i && /*#__PURE__*/_react["default"].createElement("div", {
       className: ['h-1', lineWidth, v.status && ((_stepList = stepList[i + 1]) === null || _stepList === void 0 ? void 0 : _stepList.status) === true ? completeColor : notCompleteColor].join(' ')
     }));

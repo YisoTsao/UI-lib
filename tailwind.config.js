@@ -1,7 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   theme: {
-    extend: {},
+    extend: {
+      borderRadius: {
+        '1/2': '50%',
+      },
+    },
   },
   plugins: [],
   content: ['./pages/**/*.{js,jsx}', './components/**/*.{js,jsx}', './stories/**/*.{js,jsx}'],
