@@ -8,6 +8,6 @@ module.exports = {
     },
   },
   plugins: [],
-  content: ['./pages/**/*.{js,jsx}', './components/**/*.{js,jsx}', './stories/**/*.{js,jsx}'],
-  purge: ['./pages/**/*.{js,jsx}', './components/**/*.{js,jsx}', './stories/**/*.{js,jsx}'],
+  content: ['./pages/**/*.{js,jsx}', './components/**/*.{js,jsx}'],
+  purge: ['./pages/**/*.{js,jsx}', './components/**/*.{js,jsx}'],
 };

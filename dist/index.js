@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -27,5 +29,3 @@ var _ProgressBar = _interopRequireDefault(require("./ProgressBar"));
 var _Step = _interopRequireDefault(require("./Step"));
 
 var _Modal = _interopRequireDefault(require("./Modal"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

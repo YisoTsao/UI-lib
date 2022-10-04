@@ -1,17 +1,13 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
-
-var _templateObject;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var convertHeight = function convertHeight(height) {
   var heightType = '';
@@ -21,7 +17,10 @@ var convertHeight = function convertHeight(height) {
   return heightType;
 };
 
-var Progress = _styledComponents["default"].progress(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  width: 100%;\n  height: ", ";\n  ::-webkit-progress-bar {\n    background: ", ";\n    border-radius: 5px;\n  }\n  ::-webkit-progress-value {\n    background: ", ";\n    border-radius: ", ";\n  }\n  ::-moz-progress-bar {\n    background: ", ";\n    border-radius: 5px;\n  }\n  ::-moz-progress-value {\n    background: ", ";\n    border-radius: ", ";\n  }\n"])), function (props) {
+var Progress = _styledComponents["default"].progress.withConfig({
+  displayName: "StyleBaseProgress__Progress",
+  componentId: "sc-o64274-0"
+})(["width:100%;height:", ";::-webkit-progress-bar{background:", ";border-radius:5px;}::-webkit-progress-value{background:", ";border-radius:", ";}::-moz-progress-bar{background:", ";border-radius:5px;}::-moz-progress-value{background:", ";border-radius:", ";}"], function (props) {
   return convertHeight(props.height);
 }, function (props) {
   return props.bgColor;
